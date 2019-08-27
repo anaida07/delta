@@ -1,6 +1,16 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, autoUpdater} = require('electron')
 const path = require('path')
+
+const DOMAIN = 'http://localhost:9999';
+const suffix = process.platform === 'darwin' ? `/RELEASES.json?method=JSON&version=${app.getVersion()}` : '';
+autoUpdater.setFeedURL({
+  url: `${DOMAIN}/proton/a8d003cbc2a2ba91b90adba07c1fb2c9/${process.platform}/${process.arch}${suffix}`,
+  serverType: 'json',
+});
+setInterval(() => {
+  autoUpdater.checkForUpdates()
+}, 30000)
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
