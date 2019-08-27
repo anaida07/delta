@@ -1,7 +1,7 @@
 {
   "name": "electron-quick-start",
   "productName": "ElectronQuickStart",
-  "version": "47.0.0",
+  "version": "59.0.0",
   "description": "My Electron application description",
   "main": "src/main.js",
   "authors": [
@@ -29,7 +29,7 @@
         ]
       },
       "electronWinstallerConfig": {
-        "name": "electron-quick-start-47.0.0.0.exe",
+        "name": "electron-quick-start-59.0.0.0.exe",
         "certificateFile": "./cert.pfx"
       },
       "makers": [
@@ -42,9 +42,9 @@
           "name": "@electron-forge/publisher-nucleus",
           "config": {
             "host": "http://localhost:8888",
-            "appId": "3",
-            "channelId": "a8d003cbc2a2ba91b90adba07c1fb2c9",
-            "token": "9144a874ae15786c68d20fa81880b67e"
+            "appId": "1",
+            "channelId": "6cc5674f8826743540f152dbfbb014d5",
+            "token": "3572c8585c076d8ead9ea3f104ec1de5"
           }
         }
       ]
@@ -53,7 +53,10 @@
   "dependencies": {
     "@electron-forge/maker-dmg": "^6.0.0-beta.44",
     "@electron-forge/publisher-nucleus": "^6.0.0-beta.44",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-log": "^3.0.7",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^4.1.2",
+    "source-map-support": "^0.5.13"
   },
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.44",
